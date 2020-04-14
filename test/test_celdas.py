@@ -1,3 +1,5 @@
+# Autor: Alan Hergenreder.
+
 from src.bingo import carton_ejemplo
 
 # Verifico que la cantidad de celdas ocupadas es 15.
