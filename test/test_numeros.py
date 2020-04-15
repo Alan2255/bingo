@@ -6,9 +6,9 @@ from src.bingo import carton_ejemplo
 def test_orden_columnas():
     carton = carton_ejemplo()
     for i in range(9):
-      a = carton[i][0]
-      b = carton[i][1]
-      c = carton[i][2]
+      a = carton[0][i]
+      b = carton[1][i]
+      c = carton[2][i]
       if a != 0:
         if b != 0:
           assert a < b
