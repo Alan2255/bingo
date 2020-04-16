@@ -1,7 +1,6 @@
 # Autor: Alan Hergenreder.
 
 # Los 0 representan celdas vacias.
-# Los 1 representan celdas ocupadas.
 
 def  carton_ejemplo():
      carton = (
