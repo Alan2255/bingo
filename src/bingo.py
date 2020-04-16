@@ -12,6 +12,7 @@ def  carton_ejemplo():
      )
      return carton
 
+# Genera los espacios de todas las columnas de los 6 cartones aleatoriamente.
 def espacios_carton():
     random.seed()
     t = (
