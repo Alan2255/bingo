@@ -18,4 +18,19 @@ def test_orden_columnas():
         if c != 0:
           assert b < c
 
+def test_de_a_10_columnas():
+    carton = carton_ejemplo()
+    n = 0
+    for i in range(9):
+      a = carton[0][i]
+      b = carton[1][i]
+      c = carton[2][i]
+      if i == 8:
+        n = 1
+      if a != 0:
+        assert a > ((i+1)*10)-11 and a < (i+1)*10+n
+      if b != 0:
+        assert b > ((i+1)*10)-10 and b < (i+1)*10+n
+      if c != 0:
+        assert c > ((i+1)*10)-10 and c < (i+1)*10+n
 
