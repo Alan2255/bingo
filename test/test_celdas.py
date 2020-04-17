@@ -1,10 +1,11 @@
 # Autor: Alan Hergenreder.
 
-from src.bingo import carton_ejemplo
+from src.bingo import posicion
+from src.bingo import carton_6
 
 # Verifico que la cantidad de celdas ocupadas es 15.
 def test_contar_celdas_ocupadas():
-    carton = carton_ejemplo()
+    carton = posicion(carton_6())[1]
     contador = 0
     for fila in carton:
       for celda in fila:
@@ -15,7 +16,7 @@ def test_contar_celdas_ocupadas():
 
 # Verifico que cada columna no este vacia ni llena.
 def test_columna():
-    carton = carton_ejemplo()
+    carton = posicion(carton_6())[1]
     for i in range(9):
       contador = 0
       for fila in carton: 
@@ -26,7 +27,7 @@ def test_columna():
 
 # Verifico que cada 3 celdas consecutivas no haya mas de 3 ocupadas o vacias.
 def test_nomasde3():
-    carton = carton_ejemplo()
+    carton = posicion(carton_6())[1]
     for m in range (7):
       for i in range(3):
         contador = 0
@@ -38,7 +39,7 @@ def test_nomasde3():
 # (!) Este test posiblemente pueda reemplazar al primero.
 # Verifico que cada fila tenga 5 celdas ocupadas.
 def test_fila():
-    carton = carton_ejemplo()
+    carton = posicion(carton_6())[1]
     for fila in carton:
       contador = 0
       for celda in fila:
