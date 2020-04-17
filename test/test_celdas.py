@@ -1,5 +1,6 @@
 # Autor: Alan Hergenreder.
 
+from src.bingo import suma
 from src.bingo import posicion
 from src.bingo import carton_6
 

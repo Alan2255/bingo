@@ -18,7 +18,7 @@ def suma(x,f):
       s += f[i]
 
     return s
-# Genero los 6 cartones aleatoreamente según el criterio de celdas.
+# Genero los 6 cartones aleatoreamente segun el criterio de celdas.
 def posicion(c):
     s1 = 0
     s2 = 0
