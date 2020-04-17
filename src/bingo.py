@@ -3,6 +3,7 @@
 import random
 
 # Los 0 representan celdas vacias.
+# Los numeros mayores que cero representan celdas ocupadas.
 
 def  carton_ejemplo():
      carton = (
@@ -12,13 +13,15 @@ def  carton_ejemplo():
      )
      return carton
 
+# Toma una lista y un entero, luego suma los numeros de la lista hasta la posicion del entero.
 def suma(x,f):
     s = 0
     for i in range(x):
       s += f[i]
 
     return s
-# Genero los 6 cartones aleatoreamente segun el criterio de celdas.
+
+# Toma 6 cartones llenos, y les asigna celdas vacias.
 def posicion(c):
     s1 = 0
     s2 = 0
@@ -93,6 +96,7 @@ def posicion(c):
 
     return c
 
+# Crea una lista que contiene los 6 cartones del juego, con todas las celdas ocupadas.
 def carton_6():
     c = [
           [  
