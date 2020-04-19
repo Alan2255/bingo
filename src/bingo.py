@@ -33,6 +33,8 @@ def espacios_carton():
     for i in range(9):
       if i > 0:
         s = 1
+      if i == 8:
+        s = 2
       uno = 0
       dos = 0
       for x in range(6):
