@@ -17,6 +17,7 @@ def test_orden_columnas():
       if b != 0:
         if c != 0:
           assert b < c
+
 # Compruebo si la progrecion entre cada columna es 10.
 def test_de_a_10_columnas():
     carton = carton_ejemplo()
