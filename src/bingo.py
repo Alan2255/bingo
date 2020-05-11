@@ -1,5 +1,6 @@
 # Autor: Alan Hergenreder.
 
+from __future__ import print_function
 import random
 
 # Los 0 representan celdas vacias.
@@ -14,10 +15,57 @@ def  carton_ejemplo():
      return carton
 
 
+# Genera un talonario de bingo con espacios y numeros al azar.
+def talonario_aleatorio():
+    talonario = [
+      [
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+      ],
+      [
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+      ],
+      [
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+      ],
+      [
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+      ],
+      [
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+      ],
+      [
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
+      ]
+    ]
+    n = 0
+    for carton in range(6):
+      for columna in range(9):
+        if columna == 8:
+          n = 1
+        if random.randrange(3) == 1:
+          talonario[carton][random.randrange(3)][columna] = random.randrange(((columna+1)*10)-10,(columna+1)*10+n)
+        else:
+          talonario[carton][random.randrange(3)][columna] = random.randrange(((columna+1)*10)-10,(columna+1)*10+n)
+          talonario[carton][random.randrange(3)][columna] = random.randrange(((columna+1)*10)-10,(columna+1)*10+n)
+          
+    return talonario
+
+
 # Verifico que cada columna no este vacia ni llena.
-def columna():
+def columna(carton):
     bul = True
-    carton = carton_ejemplo()
     for i in range(9):
       contador = 0
       for fila in carton: 
@@ -29,9 +77,8 @@ def columna():
 
 
 # Verifico que cada 3 celdas consecutivas no haya mas de 3 ocupadas o vacias.
-def nomasde3():
+def nomasde3(carton):
     bul = True
-    carton = carton_ejemplo()
     for m in range (7):
       for i in range(3):
         contador = 0
@@ -45,9 +92,8 @@ def nomasde3():
 
 
 # Verifico que cada fila tenga 5 celdas ocupadas.
-def fila():
+def fila(carton):
     bul = True
-    carton = carton_ejemplo()
     for fila in carton:
       contador = 0
       for celda in fila:
@@ -59,9 +105,8 @@ def fila():
 
 
 # Compruebo si los numeros de cada columna estan ordenados de menor a mayor.
-def orden_columnas():
+def orden_columnas(carton):
     bul = True
-    carton = carton_ejemplo()
     for i in range(9):
       a = carton[0][i]
       b = carton[1][i]
@@ -81,9 +126,8 @@ def orden_columnas():
     return bul
 
 # Compruebo si la progrecion entre cada columna es 10.
-def de_a_10_columnas():
+def de_a_10_columnas(carton):
     bul = True
-    carton = carton_ejemplo()
     n = 0
     for i in range(9):
       a = carton[0][i]
