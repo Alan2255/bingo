@@ -1,13 +1,13 @@
 # Autor: Alan Hergenreder.
 
 from src.bingo import carton_ejemplo
-from src.bingo import columna
+from src.bingo import columnas
 from src.bingo import fila
 from src.bingo import nomasde3
 
 
 # Verifico que cada columna no este vacia ni llena.
-def test_columna():
+def test_columnas():
     assert columna(carton_ejemplo()) == True
 
 
