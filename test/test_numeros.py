@@ -13,3 +13,8 @@ def test_orden_columnas():
 def test_de_a_10_columnas():
     assert de_a_10_columnas(carton_ejemplo()) == True
 
+
+# Compruebo si el talonario contiene todos los numeros del 1 al 90.
+def test_1a90():
+    assert _1a90(talonario_ejemplo) == True
+
