@@ -14,6 +14,98 @@ def  carton_ejemplo():
      ]
      return carton
 
+# Genera los espacios ocupados de un talonario valido.
+def espacios_talonario():
+    r = 0
+    b = False
+    i = 0
+    while(b == False):
+      b = True
+
+      banderaX = [[0,0,0,0,0,0],[0,0,0,0,0,0]]
+      banderaY = [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]]
+
+      e = [
+           [0,0,0,0,0,0,0,0,0,],
+           [0,0,0,0,0,0,0,0,0,],
+           [0,0,0,0,0,0,0,0,0,],
+           [0,0,0,0,0,0,0,0,0,],
+           [0,0,0,0,0,0,0,0,0,],
+           [0,0,0,0,0,0,0,0,0,]
+          ]
+
+      for x in range(6):
+        for y in range(9):
+          r = random.randrange(2)+1
+
+          if banderaX[0][x] == 3:
+            r = 1
+
+          if banderaX[1][x] == 6:
+            r = 2
+
+          if banderaY[0][y] == 3 and y == 0:
+            r = 1
+          if banderaY[0][y] == 2 and y > 0 and y < 8:
+            r = 1
+          if banderaY[0][y] == 1 and y == 8:
+            r = 1
+
+          if banderaY[1][y] == 3 and y == 0:
+            r = 2
+          if banderaY[1][y] == 4 and y > 0 and y < 8:
+            r = 2
+          if banderaY[1][y] == 5 and y == 8:
+            r = 2
+
+          e[x][y] = r
+          if r == 2:
+            banderaX[0][x] += 1
+            banderaY[0][y] += 1
+
+          if r == 1:
+            banderaX[1][x] += 1
+            banderaY[1][y] += 1
+
+      if espacios_ocupados(e) == False:
+        b = False
+
+
+
+# Verifico que los espacios ocupados sean validos horizontal y verticalmente.
+def espacios_ocupados(e):
+    bul = True
+    x = 0
+    y = 0
+
+    # Verifico los espacios en las filas.
+    for fila in range(6):
+      for columna in range(9):
+        x += e[fila][columna]
+      if x != 12:
+        bul = False
+      x = 0
+
+    columna = 0
+    fila = 0
+
+    # Verifico los espacios en las columnas.
+    for columna in range(9):
+      for fila in range(6):
+        y += e[fila][columna]
+      if columna == 0:
+        if y != 9:
+          bul = False
+      if columna > 0 and columna < 8:
+         if y != 8:
+           bul = False
+      if columna == 8:
+         if y != 7:
+           bul = False
+      y = 0
+
+
+    return bul
 
 # Verifico que cada columna no este vacia ni llena.
 def columna(carton):
@@ -122,4 +214,5 @@ def _1a90(t):
        bul = False
 
     return bul
+
 
