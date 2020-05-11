@@ -70,7 +70,7 @@ def espacios_talonario():
       if espacios_ocupados(e) == False:
         b = False
 
-
+    return e
 
 # Verifico que los espacios ocupados sean validos horizontal y verticalmente.
 def espacios_ocupados(e):
