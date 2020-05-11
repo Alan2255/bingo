@@ -14,6 +14,132 @@ def  carton_ejemplo():
      ]
      return carton
 
+
+# Ubica los espacios ocupados en el talonario.
+def ubicacion_talonario(e):
+    b = False
+    while(b == False):
+      b = True
+      r1 = 0
+      r2 = 0
+      bul = True
+      u = [
+           [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+           ],
+           [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+           ],
+           [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+           ],
+           [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+           ],
+           [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+           ],
+           [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+           ],
+          ]
+
+      for carton in range(6):
+        for columna in range(9):
+          r1 = 0
+          r2 = 0
+          if e[carton][columna] == 1:
+            r1 = random.randrange(3)
+            while(u[carton][r1][columna-1] == 0 and u[carton][r1][columna-2] == 0):
+              r1 = random.randrange(3)
+
+            if columna > 1:
+              if u[carton][0][columna-1] == 1:
+                if u[carton][0][columna-2] == 1:
+                  r1 = 0
+              if u[carton][1][columna-1] == 1:
+                if u[carton][1][columna-2] == 1:
+                  r1 = 1
+              if u[carton][2][columna-1] == 1:
+                if u[carton][2][columna-2] == 1:
+                  r1 = 2
+
+            u[carton][r1][columna] = 0
+
+          else:
+            r1 = random.randrange(3)
+            r2 = r1
+            while (r2 == r1):
+              r2 = random.randrange(3)
+
+
+            if columna > 1:
+              if u[carton][0][columna-1] == 1:
+                if u[carton][0][columna-2] == 1:
+                  u[carton][0][columna] = 0
+                  r1 = 0
+                  r2 = r1
+                  while (r2 == r1):
+                    r2 = random.randrange(3)
+                  if u[carton][1][columna-1] == 1:
+                    if u[carton][1][columna-2] == 1:
+                      u[carton][1][columna] = 0
+                      r2 = 1                  
+                  if u[carton][2][columna-1] == 1:
+                    if u[carton][2][columna-2] == 1:
+                      u[carton][2][columna] = 0
+                      r2 = 2                  
+
+
+
+              if u[carton][1][columna-1] == 1:
+                if u[carton][1][columna-2] == 1:
+                  u[carton][1][columna] = 0
+                  r1 = 1
+                  r2 = r1
+                  while (r2 == r1):
+                    r2 = random.randrange(3)
+                  if u[carton][2][columna-1] == 1:
+                    if u[carton][2][columna-2] == 1:
+                      u[carton][2][columna] = 0
+                      r2 = 2                                    
+
+
+              if u[carton][2][columna-1] == 1:
+                if u[carton][2][columna-2] == 1:
+                  u[carton][2][columna] = 0
+                  r1 = 2
+                  r2 = r1
+                  while (r2 == r1):
+                    r2 = random.randrange(3)
+
+            u[carton][r1][columna] = 0
+            u[carton][r2][columna] = 0
+
+
+      for i in range(6):
+        if columnas(u[i]) == False:
+          b = False
+        if nomasde3(u[i]) == False:
+          b = False
+        if fila(u[i]) == False:
+          b = False
+
+    return u
+
+
 # Genera los espacios ocupados de un talonario valido.
 def espacios_talonario():
     r = 0
@@ -108,7 +234,7 @@ def espacios_ocupados(e):
     return bul
 
 # Verifico que cada columna no este vacia ni llena.
-def columna(carton):
+def columnas(carton):
     bul = True
     for i in range(9):
       contador = 0
@@ -214,5 +340,4 @@ def _1a90(t):
        bul = False
 
     return bul
-
 
