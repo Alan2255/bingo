@@ -8,16 +8,16 @@ from src.bingo import nomasde3
 
 # Verifico que cada columna no este vacia ni llena.
 def test_columna():
-    assert columna() == True
+    assert columna(carton_ejemplo) == True
 
 
 # Verifico que cada 3 celdas consecutivas no haya mas de 3 ocupadas o vacias.
 def test_nomasde3():
-    assert nomasde3() == True
+    assert nomasde3(carton_ejemplo) == True
 
 
 # Verifico que cada fila tenga 5 celdas ocupadas.
-def test_fila():
+def test_fila(carton_ejemplo):
     assert fila() == True
 
 
