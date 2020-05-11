@@ -15,54 +15,6 @@ def  carton_ejemplo():
      return carton
 
 
-# Genera un talonario de bingo con espacios y numeros al azar.
-def talonario_aleatorio():
-    talonario = [
-      [
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-      ],
-      [
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-      ],
-      [
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-      ],
-      [
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-      ],
-      [
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-      ],
-      [
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-        [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0],
-      ]
-    ]
-    n = 0
-    for carton in range(6):
-      for columna in range(9):
-        if columna == 8:
-          n = 1
-        if random.randrange(3) == 1:
-          talonario[carton][random.randrange(3)][columna] = random.randrange(((columna+1)*10)-10,(columna+1)*10+n)
-        else:
-          talonario[carton][random.randrange(3)][columna] = random.randrange(((columna+1)*10)-10,(columna+1)*10+n)
-          talonario[carton][random.randrange(3)][columna] = random.randrange(((columna+1)*10)-10,(columna+1)*10+n)
-          
-    return talonario
-
-
 # Verifico que cada columna no este vacia ni llena.
 def columna(carton):
     bul = True
@@ -164,11 +116,10 @@ def _1a90(t):
       for fila in range(3):
         for columna in range(9):
           if t[carton][fila][columna] != 0:
-            if numeros[t[carton][fila][columna]] == 0:
-              bul = False
-            else:
-              numeros[t[carton][fila][columna]] = 0
-              print(numeros)
+            numeros[t[carton][fila][columna]] = 0
+    for i in range(90):
+      if numeros[i] != 0:
+       bul = False
 
     return bul
 
