@@ -14,6 +14,16 @@ def  carton_ejemplo():
      ]
      return carton
 
+# Genera un talonario de bingo valido.
+def generador_bingo():
+    t = orden_talonario(numeros_talonario(ubicacion_talonario(espacios_talonario())))
+
+    for carton in range(6):
+      for fila in range(3):
+        print(t[carton][fila])
+      print("")
+    
+    return t
 
 # Ordena los numeros de un talonario.
 def orden_talonario(n):
