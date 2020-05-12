@@ -15,6 +15,36 @@ def  carton_ejemplo():
      return carton
 
 
+# Coloca numeros en los espacios no ocupados del talonario.
+def numeros_talonario(u):
+    numeros = [0,1,2,3,4,5,6,7,8,9,10,
+              11,12,13,14,15,16,17,18,19,20,
+              21,22,23,24,25,26,27,28,29,30,
+              31,32,33,34,35,36,37,38,39,40,
+              41,42,43,44,45,46,47,48,49,50,
+              51,52,53,54,55,56,57,58,59,60,
+              61,62,63,64,65,66,67,68,69,70,
+              71,72,73,74,75,76,77,78,79,80,
+              81,82,83,84,85,86,87,88,89,90]
+    r = 0
+    n = 0
+    u = a
+    for carton in range(6):
+      for fila in range(3):
+        for columna in range(9):
+          if columna > 7:
+            n = 1
+          if u[carton][fila][columna] == -1:
+            r = 0
+            while(numeros[r] == 0):
+              r = random.randrange(((columna+1)*10)-10,(columna+1)*10+n)
+              if numeros[r] != 0:
+                numeros[r] = 0
+                u[carton][fila][columna] = r
+                break
+        n = 0
+    return u
+
 # Ubica los espacios ocupados en el talonario.
 def ubicacion_talonario(e):
     b = False
@@ -25,34 +55,34 @@ def ubicacion_talonario(e):
       bul = True
       u = [
            [
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
            ],
            [
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
            ],
            [
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
            ],
            [
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
            ],
            [
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
            ],
            [
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, -1, -1, -1, -1],
            ],
           ]
 
@@ -66,14 +96,14 @@ def ubicacion_talonario(e):
               r1 = random.randrange(3)
 
             if columna > 1:
-              if u[carton][0][columna-1] == 1:
-                if u[carton][0][columna-2] == 1:
+              if u[carton][0][columna-1] == -1:
+                if u[carton][0][columna-2] == -1:
                   r1 = 0
-              if u[carton][1][columna-1] == 1:
-                if u[carton][1][columna-2] == 1:
+              if u[carton][1][columna-1] == -1:
+                if u[carton][1][columna-2] == -1:
                   r1 = 1
-              if u[carton][2][columna-1] == 1:
-                if u[carton][2][columna-2] == 1:
+              if u[carton][2][columna-1] == -1:
+                if u[carton][2][columna-2] == -1:
                   r1 = 2
 
             u[carton][r1][columna] = 0
@@ -86,39 +116,39 @@ def ubicacion_talonario(e):
 
 
             if columna > 1:
-              if u[carton][0][columna-1] == 1:
-                if u[carton][0][columna-2] == 1:
+              if u[carton][0][columna-1] == -1:
+                if u[carton][0][columna-2] == -1:
                   u[carton][0][columna] = 0
                   r1 = 0
                   r2 = r1
                   while (r2 == r1):
                     r2 = random.randrange(3)
-                  if u[carton][1][columna-1] == 1:
-                    if u[carton][1][columna-2] == 1:
+                  if u[carton][1][columna-1] == -1:
+                    if u[carton][1][columna-2] == -1:
                       u[carton][1][columna] = 0
                       r2 = 1                  
-                  if u[carton][2][columna-1] == 1:
-                    if u[carton][2][columna-2] == 1:
+                  if u[carton][2][columna-1] == -1:
+                    if u[carton][2][columna-2] == -1:
                       u[carton][2][columna] = 0
                       r2 = 2                  
 
 
 
-              if u[carton][1][columna-1] == 1:
-                if u[carton][1][columna-2] == 1:
+              if u[carton][1][columna-1] == -1:
+                if u[carton][1][columna-2] == -1:
                   u[carton][1][columna] = 0
                   r1 = 1
                   r2 = r1
                   while (r2 == r1):
                     r2 = random.randrange(3)
-                  if u[carton][2][columna-1] == 1:
-                    if u[carton][2][columna-2] == 1:
+                  if u[carton][2][columna-1] == -1:
+                    if u[carton][2][columna-2] == -1:
                       u[carton][2][columna] = 0
                       r2 = 2                                    
 
 
-              if u[carton][2][columna-1] == 1:
-                if u[carton][2][columna-2] == 1:
+              if u[carton][2][columna-1] == -1:
+                if u[carton][2][columna-2] == -1:
                   u[carton][2][columna] = 0
                   r1 = 2
                   r2 = r1
@@ -239,7 +269,7 @@ def columnas(carton):
     for i in range(9):
       contador = 0
       for fila in carton: 
-        if fila[i] > 0: 
+        if fila[i] != 0: 
           contador += 1
       if not(contador > 0 and contador < 3):
         bul = False
@@ -253,7 +283,7 @@ def nomasde3(carton):
       for i in range(3):
         contador = 0
         for x in range(0,3):
-          if carton[i][x+m] > 0:
+          if carton[i][x+m] != 0:
             contador += 1
         if not(contador > 0 and contador < 3):
           bul = False
@@ -267,7 +297,7 @@ def fila(carton):
     for fila in carton:
       contador = 0
       for celda in fila:
-        if celda > 0:
+        if celda != 0:
           contador += 1
       if not(contador == 5):
         bul = False
@@ -309,10 +339,10 @@ def de_a_10_columnas(carton):
         if not( a > ((i+1)*10)-11 and a < (i+1)*10+n):
           bul = False
       if b != 0:
-        if not( b > ((i+1)*10)-10 and b < (i+1)*10+n):
+        if not( b > ((i+1)*10)-11 and b < (i+1)*10+n):
           bul = False
       if c != 0:
-        if not( c > ((i+1)*10)-10 and c < (i+1)*10+n):
+        if not( c > ((i+1)*10)-11 and c < (i+1)*10+n):
           bul = False
 
     return bul
@@ -340,4 +370,5 @@ def _1a90(t):
        bul = False
 
     return bul
+
 
