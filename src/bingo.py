@@ -11,6 +11,8 @@ import random
 def generador_bingo():
     t = orden_talonario(numeros_talonario(ubicacion_talonario(espacios_talonario())))
 
+    print("Por favor, aguarde un momento.")
+
     for carton in range(6):
       for fila in range(3):
         print(t[carton][fila])
