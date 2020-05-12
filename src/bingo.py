@@ -15,6 +15,38 @@ def  carton_ejemplo():
      return carton
 
 
+# Ordena los numeros de un talonario.
+def orden_talonario(n):
+    a = 0
+    b = 0
+    for carton in range(6):
+      for columna in range(9):
+        if n[carton][0][columna] != 0:
+          a = n[carton][0][columna]
+          if n[carton][1][columna] != 0:
+            b = n[carton][1][columna]
+            if a > b:
+              n[carton][0][columna] = b
+              n[carton][1][columna] = a
+
+          if n[carton][2][columna] != 0:
+            b = n[carton][2][columna]
+            if a > b:
+              n[carton][0][columna] = b
+              n[carton][2][columna] = a
+
+
+        if n[carton][1][columna] != 0:
+          a = n[carton][1][columna]
+          if n[carton][2][columna] != 0:
+            b = n[carton][2][columna]
+            if a > b:
+              n[carton][1][columna] = b
+              n[carton][2][columna] = a
+
+    return n
+
+
 # Coloca numeros en los espacios no ocupados del talonario.
 def numeros_talonario(u):
     numeros = [0,1,2,3,4,5,6,7,8,9,10,
@@ -28,7 +60,6 @@ def numeros_talonario(u):
               81,82,83,84,85,86,87,88,89,90]
     r = 0
     n = 0
-    u = a
     for carton in range(6):
       for fila in range(3):
         for columna in range(9):
