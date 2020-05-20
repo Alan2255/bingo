@@ -9,16 +9,19 @@ import random
 
 # Genera un talonario de bingo valido.
 def generador_bingo():
-    t = orden_talonario(numeros_talonario(ubicacion_talonario(espacios_talonario())))
-
     print("Por favor, aguarde un momento.")
+    print("")
+    
+    t = orden_talonario(numeros_talonario(ubicacion_talonario(espacios_talonario())))
 
     for carton in range(6):
       for fila in range(3):
-        print(t[carton][fila])
+        for celda in t[carton][fila]:
+          print("% 4d" % celda, end='')
+        print("")
       print("")
-    
-    return t
+
+    return 0
 
 # Ordena los numeros de un talonario.
 def orden_talonario(n):
@@ -407,4 +410,5 @@ def _1a90(t):
 
     return bul
 
+generador_bingo()
 
