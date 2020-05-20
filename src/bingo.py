@@ -6,6 +6,15 @@ import random
 # Los 0 representan celdas vacias.
 # Los numeros mayores que cero representan celdas ocupadas.
 
+# Ejemplo de carton para validar con los tests.
+def ejemplo():
+    e = [
+         [1, 10,  0,  0, 41,  0, 62,  0, 80],
+         [0, 14,  0, 33, 47,  0, 68, 71,  0],
+         [2,  0, 29,  0,  0, 55,  0, 79, 90]
+        ]
+
+    return e
 
 # Genera un talonario de bingo valido.
 def generador_bingo():
@@ -21,7 +30,7 @@ def generador_bingo():
         print("")
       print("")
 
-    return 0
+    return t
 
 # Ordena los numeros de un talonario.
 def orden_talonario(n):
@@ -386,29 +395,4 @@ def de_a_10_columnas(carton):
 
     return bul
 
-
-# Compruebo si el talonario contiene todos los numeros del 1 al 90.
-def _1a90(t):
-    bul = True
-    numeros = [0,1,2,3,4,5,6,7,8,9,10,
-              11,12,13,14,15,16,17,18,19,20,
-              21,22,23,24,25,26,27,28,29,30,
-              31,32,33,34,35,36,37,38,39,40,
-              41,42,43,44,45,46,47,48,49,50,
-              51,52,53,54,55,56,57,58,59,60,
-              61,62,63,64,65,66,67,68,69,70,
-              71,72,73,74,75,76,77,78,79,80,
-              81,82,83,84,85,86,87,88,89,90]
-    for carton in range(6):
-      for fila in range(3):
-        for columna in range(9):
-          if t[carton][fila][columna] != 0:
-            numeros[t[carton][fila][columna]] = 0
-    for i in range(90):
-      if numeros[i] != 0:
-       bul = False
-
-    return bul
-
-generador_bingo()
 
