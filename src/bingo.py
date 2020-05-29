@@ -395,4 +395,6 @@ def de_a_10_columnas(carton):
 
     return bul
 
+generador_bingo()
+
 
