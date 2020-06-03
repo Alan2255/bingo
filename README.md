@@ -58,6 +58,8 @@ Para correr el programa simplemente ejecutamos el archivo bingo.py
 <pre><code>python src/bingo.py</pre></code>
 
 ## Licencia :page_facing_up:
+Este repositorio se encuentra bajo las licencias de ...<br>
+Para más información ver LICENSE.md
 
 ## Comentarios :star:
 ### Agradecimientos
