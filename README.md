@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Alan2255/bingo.svg?branch=master)](https://travis-ci.org/Alan2255/bingo)
+[![Coverage Status](https://coveralls.io/repos/github/Alan2255/bingo/badge.svg?branch=master)](https://coveralls.io/github/Alan2255/bingo?branch=master)
 
 # Bingo :8ball:
 Éste repositorio es un proyecto para la materia Adaptación al Ambiente de Trabajo (ATT) de 6to año informática del Instituto Politécnico Superior (IPS) de la Universidad Nacional de Rosario (UNR) 2020.<br>
