@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Alan2255/bingo.svg?branch=master)](https://travis-ci.org/Alan2255/bingo)
 
-#Bingo
+# Bingo
 
 Este repositorio es un proyecto para la materia Adaptacion al Ambiente de Trabajo (ATT) de 6to año informatica del Instituto Politecnico Superior (IPS) de la Universidad Nacional de Rosario (UNR) 2020.
 
