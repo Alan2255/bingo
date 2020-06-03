@@ -1,8 +1,5 @@
 # Autor: Alan Hergenreder.
 
-require 'coveralls'
-Coveralls.wear!
-
 from src.bingo import ejemplo
 from src.bingo import columnas
 from src.bingo import fila
