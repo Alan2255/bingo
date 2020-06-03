@@ -1,8 +1,6 @@
 language: python
 
-script:
-  - pytest
+script: pytest
 
-after_succes:
-  - coveralls
+after_succes: coveralls
 
