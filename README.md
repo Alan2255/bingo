@@ -32,12 +32,12 @@ Instalar python:
 <pre><code>sudo apt install python</pre></code>
 
 ##### Pytest
-Pytest es una herramienta de pip, por lo tanto debemos instalar pip.
+Pytest es una herramienta de pip, por lo tanto debemos instalar pip.<br>
 Comprobar versión de pip:
 <pre><code>pip --version</pre></code>
 Instalar pip:
 <pre><code>sudo apt install python-pip</pre></code>
-Luego instalamos pytest.
+Luego instalamos pytest.<br>
 Comprobar version de pytest:
 <pre><code>pytest --version</pre></code>
 Instalar pytest:
@@ -54,6 +54,7 @@ Una vez que tenemos todas las herramientas y aplicaciones lo siguiente es:
 
 #### Corriendo el programa
 Para correr el programa simplemente ejecutamos el archivo bingo.py
+<pre><code>python src/bingo.py</pre></code>
 
 ## Licencia :page_facing_up:
 
