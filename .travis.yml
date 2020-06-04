@@ -7,7 +7,6 @@ language: python
 # Install the codecov pip dependency
 install:
   - pip install coveralls
-  - pip install codecov
 
 # Run the unit test
 script:
@@ -15,5 +14,4 @@ script:
 
 # Push the results back to codecov
 after_success:
-  - codecov
   - coveralls
