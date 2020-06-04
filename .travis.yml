@@ -6,12 +6,12 @@ language: python
 
 # Install the codecov pip dependency
 install:
-  - pip install codecov
   - pip install coveralls
   - pip install coverage
 
 # Run the unit test
 script:
+  - pytest
   - coverage run test/
 
 # Push the results back to codecov
