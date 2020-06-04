@@ -6,6 +6,8 @@
 En el mismo se trabajó sobre un generador de talonario de bingo escrito en python.
 
 ## Información básica :open_book:
+
+### Juego :dart:
 El tipo de juego utilizado es el bingo de 90 bolas, donde un talonario posee 6 cartones de 3 x 9 celdas (o casillas) cada uno, como se muestra en la imagen a continuación.<br>
 ![Talonario de bingo 90](../imagenes/talonario.png?raw=true)
 
