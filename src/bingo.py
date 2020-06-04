@@ -1,11 +1,11 @@
 # Autor: Alan Hergenreder.
-
+#
 from __future__ import print_function
 import random
-
+#
 # Los 0 representan celdas vacias.
 # Los numeros mayores que cero representan celdas ocupadas.
-
+#
 # Ejemplo de carton para validar con los tests.
 def ejemplo():
     e = [
@@ -15,23 +15,32 @@ def ejemplo():
         ]
 
     return e
-
+#
 # Genera un talonario de bingo valido.
 def generador_bingo():
+
     print("Por favor, aguarde un momento.")
     print("")
     
     t = orden_talonario(numeros_talonario(ubicacion_talonario(espacios_talonario())))
 
     for carton in range(6):
-      for fila in range(3):
-        for celda in t[carton][fila]:
+      for filas in range(3):
+        for celda in t[carton][filas]:
           print("% 4d" % celda, end='')
         print("")
       print("")
 
-    return t
 
+    e = ejemplo()
+    columnas(e)
+    nomasde3(e)
+    fila(e)
+    orden_columnas(e)
+    de_a_10_columnas(e)    
+
+    return t
+#
 # Ordena los numeros de un talonario.
 def orden_talonario(n):
     a = 0
@@ -62,8 +71,8 @@ def orden_talonario(n):
               n[carton][2][columna] = a
 
     return n
-
-
+#
+#
 # Coloca numeros en los espacios no ocupados del talonario.
 def numeros_talonario(u):
     numeros = [0,1,2,3,4,5,6,7,8,9,10,
@@ -92,7 +101,7 @@ def numeros_talonario(u):
                 break
         n = 0
     return u
-
+#
 # Ubica los espacios ocupados en el talonario.
 def ubicacion_talonario(e):
     b = False
@@ -216,8 +225,8 @@ def ubicacion_talonario(e):
           b = False
 
     return u
-
-
+#
+#
 # Genera los espacios ocupados de un talonario valido.
 def espacios_talonario():
     r = 0
@@ -275,7 +284,7 @@ def espacios_talonario():
         b = False
 
     return e
-
+#
 # Verifico que los espacios ocupados sean validos horizontal y verticalmente.
 def espacios_ocupados(e):
     bul = True
@@ -310,7 +319,7 @@ def espacios_ocupados(e):
 
 
     return bul
-
+#
 # Verifico que cada columna no este vacia ni llena.
 def columnas(carton):
     bul = True
@@ -322,8 +331,8 @@ def columnas(carton):
       if not(contador > 0 and contador < 3):
         bul = False
     return bul
-
-
+#
+#
 # Verifico que cada 3 celdas consecutivas no haya mas de 3 ocupadas o vacias.
 def nomasde3(carton):
     bul = True
@@ -337,8 +346,8 @@ def nomasde3(carton):
           bul = False
 
     return bul
-
-
+#
+#
 # Verifico que cada fila tenga 5 celdas ocupadas.
 def fila(carton):
     bul = True
@@ -350,8 +359,8 @@ def fila(carton):
       if not(contador == 5):
         bul = False
     return bul
-
-
+#
+#
 # Compruebo si los numeros de cada columna estan ordenados de menor a mayor.
 def orden_columnas(carton):
     bul = True
@@ -372,7 +381,7 @@ def orden_columnas(carton):
             bul = False
 
     return bul
-
+#
 # Compruebo si la progrecion entre cada columna es 10.
 def de_a_10_columnas(carton):
     bul = True
@@ -394,7 +403,7 @@ def de_a_10_columnas(carton):
           bul = False
 
     return bul
-
+#
+#
+# LLamo a la funcion principal
 generador_bingo()
-
-
