@@ -1,5 +1,10 @@
 language: python
 
+install:
+  - apt install python3
+  - apt install python3-pip
+  - pip install coverage
+
 script:
   - pytest
   - python3 -m coverage run src/bingo.py

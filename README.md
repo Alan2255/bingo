@@ -18,6 +18,8 @@ A continuacion se detallan las herramientas necesarias para obtener y utilizar l
 * Pytest
 <br>
 Antes de comenzar con la instalación actualizamos los repositorios:
+<pre><code>sudo apt-get update</pre></code>
+...y:
 <pre><code>sudo apt update</pre></code>
 
 ##### Git
