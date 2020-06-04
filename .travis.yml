@@ -2,5 +2,6 @@ language: python
 
 script:
   - pytest
+  - python3 -m coverage run src/bingo.py
 
-after_success:
+after_success: coveralls
