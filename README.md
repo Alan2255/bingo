@@ -28,23 +28,34 @@ Instalar git:
 <pre><code>sudo apt install git</pre></code>
 
 ##### Python
-Debemos instalar python si no lo tenemos.<br>
+Debemos instalar python (la version que sea) si no lo tenemos.<br>
 Comprobar versión de python:
 <pre><code>python --version</pre></code>
+...o comprobar version de python3:
+<pre><code>python3 --version</pre></code>
 Instalar python:
 <pre><code>sudo apt install python</pre></code>
+...o instalar python3:
+<pre><code>sudo apt install python3</pre></code>
 
 ##### Pytest
-Pytest es una herramienta de pip, por lo tanto debemos instalar pip.<br>
+Pytest es una herramienta de pip, por lo tanto debemos instalar pip (si usamos python3, entonces pip3).<br>
 Comprobar versión de pip:
 <pre><code>pip --version</pre></code>
+...o comprobar versión de pip3:
+<pre><code>pip3 --version</pre></code>
 Instalar pip:
 <pre><code>sudo apt install python-pip</pre></code>
-Luego instalamos pytest.<br>
+...o instalar pip3:
+<pre><code>sudo apt install python3-pip</pre></code>
+
+Luego instalamos pytest con pip.<br>
 Comprobar version de pytest:
 <pre><code>pytest --version</pre></code>
-Instalar pytest:
+Instalar pytest con pip:
 <pre><code>pip install pytest</pre></code>
+...o con pip3:
+<pre><code>pip3 install pytest</pre></code>
 
 ### Documentación y uso :crossed_swords:
 
@@ -53,7 +64,19 @@ Una vez que tenemos todas las herramientas y aplicaciones lo siguiente es:
 1. Cree una carpeta nueva donde más le guste, que contendrá los archivos de este repositorio.
 <pre><code>mkdir 'nombre_de_la_carpeta'</pre></code>
 2. A continuación, entre en dicha carpeta, y ejecute el siguiente codigo.
-<pre><code>git pull https://github.com/Alan2255/bingo.git</pre></code>
+<pre><code>git clone https://github.com/Alan2255/bingo.git</pre></code>
+Esto solo debe realizarse la primera vez que obtenemos los archivos.
+
+#### Actualizando el repositorio
+Para actualizar el repositorio en su maquina local entramos en la carpeta donde clonamos los archivos y ejecutamos:
+<pre><code>git pull origin master</pre></code>
+
+#### Ubicación
+En src/<br>
+Programa que genera el talonario de bingo.
+
+En test/<br>
+Tests que validan el funcionamiento del src.
 
 #### Corriendo el programa
 Para correr el programa simplemente ejecutamos el archivo bingo.py
