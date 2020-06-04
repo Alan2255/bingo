@@ -59,9 +59,9 @@ Una vez que tenemos todas las herramientas y aplicaciones lo siguiente es:
 Para correr el programa simplemente ejecutamos el archivo bingo.py
 <pre><code>python src/bingo.py</pre></code>
 
-## Licencia :page_facing_up:
-Este repositorio se encuentra bajo las licencias de ...<br>
-Para más información ver LICENSE.md
+## Licencia :scroll:
+Este repositorio se encuentra bajo la licencia GNU GPLv3<br>
+Para más información ver el archivo LICENSE
 
 ## Comentarios :star:
 ### Agradecimientos
