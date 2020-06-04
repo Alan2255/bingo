@@ -1,9 +1,7 @@
 language: python
 
 install:
-  - apt install python3
-  - apt install python3-pip
-  - pip install coverage
+  - pip3 install coverage
 
 script:
   - pytest
