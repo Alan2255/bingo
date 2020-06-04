@@ -1,10 +1,13 @@
 language: python
 
 install:
-  - pip3 install coverage
+  - pip install pytest==4.5.0
+  - pip install codecov==2.0.15
+  - pip install pytest-cov==2.7.1
+
 
 script:
-  - pytest
-  - python3 -m coverage run src/bingo.py
+  - pytest --cov-report term --cov=investpy test/
 
-after_success: coveralls
+after_success:
+  - codecov
