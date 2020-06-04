@@ -4,17 +4,17 @@ sudo: false
 # Set the build language to Python
 language: python
 
-# Install the codecov pip dependency
+# Install the tools for pytest and coveralls
 install:
+  - pip install pytest
+  - pip install pytest-cov
   - pip install coveralls
-  - pip install coverage
 
 # Run the unit test
 script:
-  - pytest
-#  - coverage run test/
+  - pytest --cov=test/
 
-# Push the results back to codecov
+# Push the results back to coveralls
 after_success:
   - coveralls
 
