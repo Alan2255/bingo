@@ -29,7 +29,7 @@ Instalar git:
 <pre><code>sudo apt install git</pre></code>
 
 ##### Python
-Debemos instalar python (la version que sea) si no lo tenemos.<br>
+Debemos instalar python (la version que sea) si es que no lo tenemos.<br>
 Comprobar versión de python:
 <pre><code>python --version</pre></code>
 ...o comprobar version de python3:
@@ -62,14 +62,14 @@ Instalar pytest con pip:
 
 #### Clonando el repositorio
 Una vez que tenemos todas las herramientas y aplicaciones lo siguiente es:
-1. Cree una carpeta nueva donde más le guste, que contendrá los archivos de este repositorio.
+1. Creamos una carpeta nueva donde más nos guste, que contendrá los archivos de este repositorio.
 <pre><code>mkdir 'nombre_de_la_carpeta'</pre></code>
-2. A continuación, entre en dicha carpeta, y ejecute el siguiente codigo.
+2. A continuación, entramos en dicha carpeta, y ejecutamos el siguiente codigo.
 <pre><code>git clone https://github.com/Alan2255/bingo.git</pre></code>
 Esto solo debe realizarse la primera vez que obtenemos los archivos.
 
 #### Actualizando el repositorio
-Para actualizar el repositorio en su maquina local entramos en la carpeta donde clonamos los archivos y ejecutamos:
+Para actualizar el repositorio en nuestra maquina local entramos en la carpeta donde clonamos los archivos y ejecutamos:
 <pre><code>git pull origin master</pre></code>
 
 #### Ubicación
