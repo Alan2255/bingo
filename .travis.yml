@@ -12,7 +12,7 @@ install:
 
 # Run the unit test
 script:
-  - pytest --cov=test/ --repeat 10 
+  - pytest --repeat=10 --cov=test/ 
 
 # Push the results back to coveralls
 after_success:
