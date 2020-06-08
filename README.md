@@ -89,5 +89,6 @@ Este repositorio se encuentra bajo la licencia GNU GPLv3<br>
 Para más información ver el archivo LICENSE
 
 ## Comentarios :star:
+
 ### Agradecimientos
 A Mariano D'Agostino, profesor encargado de la asignatura.
