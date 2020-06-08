@@ -6,13 +6,11 @@ from src.bingo import orden_columnas
 
 # Compruebo si los numeros de cada columna estan ordenados de menor a mayor.
 def test_orden_columnas():
-    for i in range(10):
       assert orden_columnas(ejemplo()) == True
 
 
 # Compruebo si la progrecion entre cada columna es 10.
 def test_de_a_10_columnas():
-    for i in range(10):
       assert de_a_10_columnas(ejemplo()) == True
 
 
