@@ -64,7 +64,7 @@ Instalar pytest con pip:
 #### Clonando el repositorio
 Una vez que tenemos todas las herramientas y aplicaciones lo siguiente es:
 1. Creamos una carpeta nueva donde más nos guste, que contendrá los archivos de este repositorio.
-<pre><code>mkdir 'nombre_de_la_carpeta'</pre></code>
+<pre><code>mkdir &ltnombre_de_la_carpeta&gt</pre></code>
 2. A continuación, entramos en dicha carpeta, y ejecutamos el siguiente codigo.
 <pre><code>git clone https://github.com/Alan2255/bingo.git</pre></code>
 Esto solo debe realizarse la primera vez que obtenemos los archivos.
