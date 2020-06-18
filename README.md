@@ -16,7 +16,7 @@ El tipo de juego utilizado es el bingo de 90 bolas, donde un talonario posee 6 c
 A continuacion se detallan las herramientas necesarias para obtener y utilizar los archivos de este repositorio en el sistema operativo Linux.<br>
 * Git
 * Python
-* Pytest
+* Jinja
 <br>
 Antes de comenzar con la instalación actualizamos los repositorios con:
 <pre><code>sudo apt-get update</pre></code>
@@ -40,8 +40,8 @@ Instalar python:
 ...o instalar python3:
 <pre><code>sudo apt install python3</pre></code>
 
-##### Pytest
-Pytest es una herramienta de pip, por lo tanto debemos instalar pip (si usamos python3, entonces pip3).<br>
+##### Jinja
+Jinja se instala con pip, por lo tanto primero debemos instalar pip (si usamos python3, entonces pip3).<br>
 Comprobar versión de pip:
 <pre><code>pip --version</pre></code>
 ...o comprobar versión de pip3:
@@ -51,13 +51,13 @@ Instalar pip:
 ...o instalar pip3:
 <pre><code>sudo apt install python3-pip</pre></code>
 
-Luego instalamos pytest con pip.<br>
-Comprobar version de pytest:
-<pre><code>pytest --version</pre></code>
-Instalar pytest con pip:
-<pre><code>pip install pytest</pre></code>
+Luego instalamos jinja con pip.<br>
+Comprobar version de jinja:
+<pre><code>jinja2 --version</pre></code>
+Instalar jinja con pip:
+<pre><code>pip install jinja</pre></code>
 ...o con pip3:
-<pre><code>pip3 install pytest</pre></code>
+<pre><code>pip3 install jinja2</pre></code>
 
 ### Documentación y uso :crossed_swords:
 
@@ -81,8 +81,9 @@ En test/<br>
 Tests que validan el funcionamiento del src.
 
 #### Corriendo el programa
-Para correr el programa simplemente ejecutamos el archivo bingo.py
-<pre><code>python src/bingo.py</pre></code>
+Para correr el programa ejecutamos el siguiente comando:
+<pre><code>python src/bingo.py &gt index.html</pre></code>
+Y luego de que haya terminado, doble clic al index.html que apareció en nuestra carpeta.
 
 ## Licencia :scroll:
 Este repositorio se encuentra bajo la licencia GNU GPLv3<br>
