@@ -8,7 +8,7 @@ language: python
 install:
   - pip install pytest
   - pip install pytest-cov
-  - pip install pytest-repeat
+  - pip install jinja2
   - pip install coveralls
 
 # Run the unit test
@@ -18,5 +18,3 @@ script:
 # Push the results back to coveralls
 after_success:
   - coveralls
-
-

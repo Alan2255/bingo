@@ -1,0 +1,42 @@
+<!-- Autor: Alan Hergenreder -->
+
+<!doctype html>
+<html lan="es">
+
+    <!-- Cabeza -->
+    <head>
+        <link rel="stylesheet" href="estilo.css" type="text/css">
+        <link rel="shorcut icon" href="https://i.ya-webdesign.com/images/vector-b-letra-15.png"/>
+        <title>Bingo</title>
+    </head>
+
+    <!-- Cuerpo -->
+    <body style="background-color: blue">
+
+        <!-- Talonario -->
+        <div>
+
+            {% for carton in range(6) %}
+            <div class="carton">
+
+                {% for fila in range (3) %}
+                <div class="fila">
+                
+                    {% for celda in range(9) %}
+                        {% if talonario[carton][fila][celda] != 0 %}
+                            <div class="celda o">{{ talonario[carton][fila][celda] }}</div>
+                        {% else %}
+                            <div class="celda"></div>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+        </div><!-- Fin Talonario-->
+
+    </body>
+
+</html>

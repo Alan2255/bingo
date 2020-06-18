@@ -2,6 +2,7 @@
 
 from __future__ import print_function
 import random
+from jinja2 import Template
 
 # Los 0 representan celdas vacias.
 # Los numeros mayores que cero representan celdas ocupadas.
@@ -19,18 +20,11 @@ def ejemplo():
 # Genera un talonario de bingo valido.
 def generador_bingo():
 
-    print("Por favor, aguarde un momento.")
-    print("")
-    
     t = orden_talonario(numeros_talonario(ubicacion_talonario(espacios_talonario())))
-
-    for carton in range(6):
-      for filas in range(3):
-        for celda in t[carton][filas]:
-          print("% 4d" % celda, end='')
-        print("")
-      print("")
  
+    template = Template(open('plantilla.j2').read())
+    print(template.render(talonario=t))
+
     return t
 
 # Ordena los numeros de un talonario.
