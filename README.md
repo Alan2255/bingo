@@ -86,6 +86,9 @@ Programa que genera el talonario de bingo.
 En test/<br>
 Tests que validan el funcionamiento del src.
 
+En imagenes/<br>
+Las imagenes usadas en este readme.
+
 #### Corriendo el programa
 Primero debemos configurar flask una única vez:
 <pre><code>export FLASK_ENV=development</pre></code>
