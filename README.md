@@ -10,7 +10,7 @@ En el mismo se trabajó sobre un generador de talonario de bingo escrito en pyth
 
 ### Juego :dart:
 El tipo de juego utilizado es el bingo de 90 bolas, donde un talonario posee 6 cartones de 3 x 9 celdas (o casillas) cada uno, como se muestra en la imagen a continuación.<br>
-![Talonario de bingo 90](imagenes/talonario.png?raw=true)
+![Talonario de bingo 90](imagenes/talonario.png?raw=true)<br>
 (Los colores del talonario son aleatorios cada vez que se genera)
 
 ### Aplicaciones y requisitos :floppy_disk:
@@ -92,11 +92,11 @@ Primero debemos configurar flask una única vez:
 
 Luego ejecutamos el siguiente comando:
 <pre><code>flask run</pre></code>
-Esperamos a que nos va aparezca algo como esto:
-![Ejemplo](imagenes/ejemplo.png?raw=true)
+Esperamos a que nos aparezca algo como esto:
+![Ejemplo](imagenes/ejemplo.png?raw=true)<br>
 Clic derecho en el link, abrir el enlace, y tendremos listo nuestro talonario de bingo.
 
-Una vez que cargo la página, si queremos generar un nuevo talonario, ¡basta con recargar la página!<br>(Tene en cuenta que cada nuevo talonario tarda aproximadamente 30 segundos en generarse)
+Una vez que abrimos la página, si queremos generar un nuevo talonario, ¡basta con recargar la página!<br>(Tene en cuenta que cada nuevo talonario tarda aproximadamente 30 segundos en generarse)
 
 ## Licencia :scroll:
 Este repositorio se encuentra bajo la licencia GNU GPLv3<br>
