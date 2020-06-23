@@ -3,6 +3,8 @@
 from __future__ import print_function
 import random
 from jinja2 import Template
+from flask import Flask, render_template, request
+app = Flask(__name__)
 
 # Los 0 representan celdas vacias.
 # Los numeros mayores que cero representan celdas ocupadas.
@@ -21,9 +23,6 @@ def ejemplo():
 def generador_bingo():
 
     t = orden_talonario(numeros_talonario(ubicacion_talonario(espacios_talonario())))
- 
-    template = Template(open('plantilla.j2').read())
-    print(template.render(talonario=t))
 
     return t
 
@@ -384,11 +383,4 @@ def de_a_10_columnas(carton):
           bul = False
 
     return bul
-
-# LLamo a la funcion principal que genera el talonario.
-generador_bingo()
-
-
-
-
 
