@@ -16,11 +16,10 @@ El tipo de juego utilizado es el bingo de 90 bolas, donde un talonario posee 6 c
 A continuacion se detallan las herramientas necesarias para obtener y utilizar los archivos de este repositorio en el sistema operativo Linux.<br>
 * Git
 * Python
-* Jinja
+* Pip (diversas herramientas)
 <br>
 Antes de comenzar con la instalación actualizamos los repositorios con:
 <pre><code>sudo apt-get update</pre></code>
-<pre><code>sudo apt update</pre></code>
 
 ##### Git
 Debemos instalar Git si es que no lo tenemos.<br>
@@ -40,8 +39,9 @@ Instalar python:
 ...o instalar python3:
 <pre><code>sudo apt install python3</pre></code>
 
-##### Jinja
-Jinja se instala con pip, por lo tanto primero debemos instalar pip (si usamos python3, entonces pip3).<br>
+##### Pip
+Pip (o pip3) es un sistema de gestión de paquetes, que nos va a proveer herramientas como Pytest, Jinja2 y Flask, para darle un poco de diversión al formato de nuestros talonarios.
+
 Comprobar versión de pip:
 <pre><code>pip --version</pre></code>
 ...o comprobar versión de pip3:
@@ -51,13 +51,16 @@ Instalar pip:
 ...o instalar pip3:
 <pre><code>sudo apt install python3-pip</pre></code>
 
-Luego instalamos jinja con pip.<br>
-Comprobar version de jinja:
+Verificamos si tenemos las herramientas necesarias:<br>
+Comprobar version de Pytest:
+<pre><code>pytest --version</pre></code>
+Comprobar version de Jinja2:
 <pre><code>jinja2 --version</pre></code>
-Instalar jinja con pip:
-<pre><code>pip install jinja</pre></code>
-...o con pip3:
-<pre><code>pip3 install jinja2</pre></code>
+Comprobar version de Flask:
+<pre><code>flask --version</pre></code>
+
+En caso de no tenerlas, las instalamos:
+<pre><code>pip install pytest jinja2 flask</pre></code>
 
 ### Documentación y uso :crossed_swords:
 
@@ -81,9 +84,18 @@ En test/<br>
 Tests que validan el funcionamiento del src.
 
 #### Corriendo el programa
-Para correr el programa ejecutamos el siguiente comando:
-<pre><code>python src/bingo.py &gt index.html</pre></code>
-Y luego de que haya terminado, doble clic al index.html que apareció en nuestra carpeta.
+Primero debemos configurar flask una única vez:
+<pre><code>export FLASK_ENV=development</pre></code>
+<pre><code>export FLASK_APP=run.py</pre></code>
+<pre><code>set "FLASK_APP=run.py"</pre></code>
+
+Luego ejecutamos el siguiente comando:
+<pre><code>flask run</pre></code>
+Esperamos a que nos va aparezca algo como esto:
+
+Clic derecho en el link, abrir el enlace, y tendremos listo nuestro talonario de bingo.
+
+Una vez que cargo la página, si queremos generar un nuevo talonario, ¡basta con recargar la página!<br>(Tene en cuenta que cada nuevo talonario tarda aproximadamente 30 segundos en generarse)
 
 ## Licencia :scroll:
 Este repositorio se encuentra bajo la licencia GNU GPLv3<br>
