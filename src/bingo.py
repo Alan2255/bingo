@@ -384,7 +384,8 @@ def de_a_10_columnas(carton):
 
     return bul
 
-# LLamo a la función que genera el talonario
+
+# LLamo a la funcion que genera el talonario
 generador_bingo()
 
 
