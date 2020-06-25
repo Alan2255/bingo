@@ -90,7 +90,7 @@ En imagenes/<br>
 Las imagenes usadas en este readme.
 
 #### Corriendo el programa
-Primero debemos configurar flask una única vez:
+Primero debemos configurar flask:
 <pre><code>export FLASK_ENV=development</pre></code>
 <pre><code>export FLASK_APP=run.py</pre></code>
 <pre><code>set "FLASK_APP=run.py"</pre></code>
