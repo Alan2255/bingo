@@ -4,6 +4,17 @@ sudo: false
 # Set the build language to Python
 language: python
 
+# Versions of python 
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.8-dev"
+  - "nightly"
+
 # Install the tools for pytest and coveralls
 install:
   - pip install pytest
