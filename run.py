@@ -7,6 +7,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    color = ['Gold','LawnGreen','Orange','Teal','Chocolate','Indigo','HotPink','SeaGreen','DarkRed']
     t = generador_bingo()
-    return render_template("plantilla.html",talonario=t,color=color[random.randrange(9)])
+    return render_template("index.html",bingo=t)
