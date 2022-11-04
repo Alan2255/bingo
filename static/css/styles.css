@@ -1,12 +1,12 @@
-.carton {padding: 0.75em;}
+.carton {padding: 1em;}
 
 .fila {
     display: flex;
     justify-content: center;
 }
 .celda {
-    width: 1.4em;
-    height: 1.4em;
+    width: 3em;
+    height: 3em;
     border: 1px solid;
     background-color: white;
 }
