@@ -1,0 +1,50 @@
+.carton {padding: 0.75em;}
+
+.fila {
+    display: flex;
+    justify-content: center;
+}
+.celda {
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid;
+    background-color: white;
+}
+.ocupada {
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+}
+.download {
+    background-color: rgba(0, 0, 255, 0.65);
+}
+.reload {
+    background-color: rgba(0, 128, 0, 0.65);
+}
+.color {
+    background-color: rgba(255, 255, 0, 0.65);
+}
+.button{
+    color: black;
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 auto;
+}
+.button:hover {
+    box-shadow: rgba(122, 122, 122, 0.35) 0 -25px 18px -14px inset,rgba(109, 109, 109, 0.25) 0 1px 2px,rgba(55,55,55,.25) 0 2px 4px,rgba(44,44,44,.25) 0 4px 8px,rgba(44,44,44,.25) 0 8px 16px,rgba(44,44,44,.25) 0 16px 32px;
+    transform: scale(1.05);
+}
