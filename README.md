@@ -26,7 +26,7 @@ Then it will show something like this
 ## Requirements :floppy_disk:
 * Git
 * Python
-* Pip (diversas herramientas)
+* Pip
 
 ### Installation :wrench:
 <pre><code>sudo apt install git python3 pip3</pre></code>
