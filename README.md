@@ -8,7 +8,7 @@
 Random bingo generator to download in A4 as pdf
 
 ### Output example
-![Bingo](images/bingo.png?raw=true)<br>
+![Bingo](static/images/bingo.png?raw=true)<br>
 
 #### Colors :art:
 There is a button to change the random color
@@ -19,7 +19,7 @@ Run the script
 
 Then it will show something like this
 
-![Consola] (images/consola.png?raw=true)<br>
+![Consola] (static/images/consola.png?raw=true)<br>
 
 If you want a new bingo, just reload the page.<br>(Each run should take less than a minute)
 
