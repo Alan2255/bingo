@@ -19,7 +19,7 @@ Run the script
 
 Then it will show something like this
 
-![Consola] (static/images/consola.png?raw=true)<br>
+![Consola](static/images/consola.png?raw=true)<br>
 
 (Each run should take less than a minute)
 
@@ -39,4 +39,4 @@ Give it permission to execute
 GNU GPLv3<br>
 
 ## Credits :star:
-To Mariano D'Agostino (@dagostinoips), teacher in charge of the subject.
+To Mariano D'Agostino, teacher in charge of the subject.
