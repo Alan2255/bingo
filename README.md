@@ -21,7 +21,7 @@ Then it will show something like this
 
 ![Consola] (static/images/consola.png?raw=true)<br>
 
-If you want a new bingo, just reload the page.<br>(Each run should take less than a minute)
+(Each run should take less than a minute)
 
 ## Requirements :floppy_disk:
 * Git
